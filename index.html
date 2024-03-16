@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+ body {
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+  .mode-button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+  }
+  .mode-button:hover {
+    background-color: #45a049; /* Dark Green */
+  }
+  .dark-mode {
+    background-color: #333;
+    color: #fff;
+  }
+  .light-mode {
+    background-color: #fff;
+    color: #333;
+  }
+    </style>
+</head>
+<body class="light-mode">
+
+  <h1>sardorcoder</h1>
+
+  <button class="mode-button" onclick="toggleMode('dark')">
+    Dark Mode</button>
+  <button class="mode-button" onclick="toggleMode('light')">
+    Light Mode</button>
+
+
+    
+    <script>
+ function toggleMode(mode) {
+
+      var body = document.body;
+
+      if (mode === 'dark') {
+
+
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+      } 
+      
+      else {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+      }
+
+
+    }
+    </script>
+</body>
+</html>
